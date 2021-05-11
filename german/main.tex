@@ -3,6 +3,15 @@
 \usepackage{hyperref}
 \usepackage{fontawesome}
 \usepackage{wasysym} 
+\usepackage{tikz}
+
+\newcommand{\roundpic}[4][]{
+  \tikz\node [circle, minimum width = #2,
+    path picture = {
+      \node [#1] at (path picture bounding box.center) {
+        \includegraphics[width=#3]{#4}};
+    }] {};}
+
 \begin{document}
 
 \fontfamily{ppl}\selectfont
@@ -10,27 +19,27 @@
 \noindent
 \begin{tabularx}{\linewidth}{@{}m{0.8\textwidth} m{0.2\textwidth}@{}}
 {
-    \Large{Kristof G. Herrmann} \newline
+    \Large{Felix Mönckemeyer} \newline
     \small{
         \clink{
-            \href{mailto:kristof.herrmann@rwth-aachen.de}{kristof.herrmann@rwth-aachen.de} \textbf{·} 
-            {\fontdimen2\font=0.75ex +49 151 2014 2005}
+            \href{mailto:felix.moenckemeyer@gmail.com}{felix.moenckemeyer@gmail.com} \textbf{·} 
+            {\fontdimen2\font=0.75ex +49 176 2354 9970}
             \textbf{·} 
             {\fontdimen2\font=0.75ex Köln, Germany}
         } 
         \begin{flushleft}
-            \footnotesize Hochmotivierter \textbf{Mathematiker und Entwickler} (IoT) mit großem Interesse an komplexen Problemenstellungen. Mehr als 2 Jahre Erfahrung in der Entwicklung von industrieller Software von der Shopfloor-Ebene bis in die Cloud. \textbf{Projektleitung}, Anforderungsanalyse, Planung, Testing und Dokumentation.
+            \footnotesize Hochmotivierter \textbf{Software Entwickler} (IoT \& Fullstack) mit großem Interesse an komplexen Problemenstellungen. Mehr als 2 Jahre Erfahrung in der Entwicklung von industrieller Software von der Maschine bis in die Cloud. \textbf{Projektleitung}, Anforderungsanalyse, Planung, Testing und Dokumentation.
         \end{flushleft}
     }
 } & 
 {
     \hfill
-    \includegraphics[width=2.7cm]{images/portrait.jpg}
+    \roundpic[]{4cm}{4cm}{images/portrait.jpeg}
 }
 \end{tabularx}
 \vspace{-5mm}
 \begin{center}
-\small "Ich möchte meine Fähigkeiten im Projektmanagement weiter verbessern, Verantwortung übernehmen und Teil eines innovativen Teams sein, welches digitale Lösungen mit echten Mehrwerten schafft."
+\small "Ich möchte meine Fähigkeiten in der Softwareentwicklung erweitern und enger mit dem Kunden an echten Lösungen arbeiten, die einen direkten Mehrwert bieten. "
 %\vspace{5mm}
 
 %Softwareentwickler für Int Anwendungen mit acht Jahren Erfahrung in der Entwicklung einer breiten Palette von Tools für iOS und Android für eine Reihe von Kunden. 
@@ -46,24 +55,16 @@
         \begin{itemize}
             % item 1 %
             \item \frcontent{Senseering GmbH}{Full Stack Software Engineer - Köln}{
-            Entwickler einer dezentralen data sharing platform im Sinne von \href{https://www.bmwi.de/Redaktion/DE/Dossier/gaia-x.html}{GAIA-X}. Technischer Berater IoT Lösungen.}{seit April 2020}
-             \item \frcontent{WZL der RWTH Aachen}{Werkstudent - Aachen}{Entwickler einer dezentralen data sharing platform im Sinne von \href{https://www.bmwi.de/Redaktion/DE/Dossier/gaia-x.html}{GAIA-X}}{April 2019 - April 2020}
-            \item \frcontent{PricewaterhouseCoopers GmbH}{Praktikant Business Intelligence - Düsseldorf}{Entwicklung eines Planungstools für die Wartung und Instandhaltung der Fahrzeuge eines großen, deutschen Transportdienstleisters.}{Oktober 2018 - Februar 2019}
-            % item 2 %
-            \item \frcontent{RWTH Aachen}{Tutor für höhere Mathematik- Aachen}{}{Oktober 2015 - September 2018}
+            Entwickler einer dezentralen data sharing platform im Sinne von \href{https://www.bmwi.de/Redaktion/DE/Dossier/gaia-x.html}{GAIA-X}. Software Berater - IoT Infrastruktur Lösungen.}{seit April 2020}
+             \item \frcontent{WZL der RWTH Aachen}{Werkstudent - Aachen}{Entwickler einer Cloud und DLT basierten Datatrading Plattform.}{April 2018 - April 2020}
+            
         \end{itemize}
     }
     \csection{AUSBILDUNG}{\small
         \begin{itemize}
             % item 1 %
-            \item \frcontent{M.Sc. Mathematik \footnotesize $\diameter$1.0}{Rheinisch-Westfälische Technische Hochschule Aachen}{}{Herbst 2017- Herbst 2019}
-            \item \frcontent{B.Sc. Mathematik \footnotesize $\diameter$1.8}{Rheinisch-Westfälische Technische Hochschule Aachen}{}{Herbst 2014- Herbst 2017}
-        \end{itemize}
-    }
-    \csection{AUSZEICHNUNGEN}{\small
-        \begin{itemize}
-            % item 1 %
-            \item \frcontent{\href{https://www.spaicer.de/}{Springorum-Denkmünze} }{proRWTH - Freunde und Förderer der RWTH Aachen}{}{2020}
+            \item \frcontent{B.Sc. Informatik \footnotesize }{Rheinisch-Westfälische Technische Hochschule Aachen}{}{Herbst 2014- Herbst 2018}
+            \item \frcontent{M.Sc. Informatik \footnotesize }{Rheinisch-Westfälische Technische Hochschule Aachen}{}{Seit Herbst 2018}
         \end{itemize}
     }
 } 
@@ -74,11 +75,9 @@
     \csection{SKILLS}{\small
         \begin{itemize}
              \item \textbf{Programmiersprachen \& Datenbanken} \newline
-            {\footnotesize Nodejs, Vue, Python, MySQL, Mongodb, Iinfluxdb, Elasticsearch, Redis}
+            {\footnotesize Nodejs, Vue, Python, MySQL, Mongodb, Influxdb, Redis}
             \item \textbf{Cloud \& Technologien} \newline
-            {\footnotesize S3/Azure Blob Storage, EC2, CodeBuild, CodePipeline, CDN, ECS, Azure IoT Hub, Grafana, docker, Portainer, Node Red, Github Actions, DynamoDB, AWS Cognito, KeyCloak, Auth0, IOTA, Nginx, httpd}
-            \item \textbf{Mathematik} \newline
-            {\footnotesize Partielle Differentialgleichungen \& Maßtheorie, Finanzmathematik, Numerische Analysis}
+            {\footnotesize S3/Azure Blob Storage, EC2, CodeBuild, CodePipeline, CloudFront, Grafana, docker, Node Red, Github Actions, DynamoDB, AWS Cognito, Auth0, IOTA, Nginx, Route 53, ELB, API Gateway, AWS Lambda}
               \item \textbf{Sprachen} \newline
             {\footnotesize Deutsch, Englisch}
         \end{itemize}
@@ -88,48 +87,23 @@
             \item \frcontent{spaicer \clink{\href{https://www.spaicer.de/}{[spaicer.de]}}}{Skalierbare adaptive Produktionssysteme durch KI-Basierte Resilienzoptimierung - Projektverantwortung }{}{Projektverantwortung, IoT, Machine Learning, KI}
             \item \frcontent{obsidian \clink{\href{https://github.com/Senseering/obsidian}{[Senseering/obsidian]}}}{A Nodejs based immutability layer for (industrial) data}{Release pending}{Nodejs, IOTA}
              \item \frcontent{MyDataEconomy \clink{\href{https://www.mydataeconomy.com}{[mydataeconomy.com]}}}{Decentralized IoT data sharing platform for sovereign data exchange.}{}{GAIA-X, Nodejs, Docker, IOTA, InfluxDB}
-             \item \frcontent{Duck \clink{\href{https://arzelaascoii.github.io/UAVDocs}{[arzelaascoii.github.io/UAVDocs]}}}{Autonomous flying solar plane built from scratch.}{}{UAV, Ardupilot, ROS, Docusaurus}
         \end{itemize}
     }
-    %\csection{OTHER HIGHLIGHTS}{\small
-    %%    \begin{itemize}
-     %       \item {\footnotesize Gave talk on \textit{Achieving Rapid Response Times in Large Online Services} at Berkeley AMPLab Cloud.}
-     %       \item {\footnotesize Led several teams across infrastructure, founded \textit{Google Brain} and was involved in hiring process.}
-     %   \end{itemize}
-    %}
-    %\csection{HOBBIES \& INTERESTS}{\small
-    %    \vspace{0.32cm}
-    %    \begin{tabularx}{\linewidth}{@{}*{4}{>{\centering\arraybackslash}X}@{}}
-    %%        {\centering
-     %       \includegraphics[width=0.8cm]{images/userexperience.png}
-     %%       } &
-       %     {\centering
-        %    \includegraphics[width=0.8cm]{images/lamp.png}
-         %   } & 
-         %   {\centering
-        %    \includegraphics[width=0.8cm]{images/healthcare.png}
-    %        } &
-     %       {\centering
-     %       \includegraphics[width=0.8cm]{images/cauldron.png}
-     %       } \\
-     %       {\footnotesize UI/UX} & {\footnotesize Problem Solving} & {\footnotesize Healthcare} & %{\footnotesize Open Source}
-     %   \end{tabularx}
-    %}
 }
 \end{tabularx}
 \end{center}
-
+\vspace{20mm}
 \begin{center}
 
 \begin{tabularx}{\linewidth}{@{}*{3}{X}@{}}
 \centering{\href{https://www.linkedin.com/in/kgherr}{ \Large  \faLinkedinSquare } }
 &
-\centering{ \href{https://github.com/ArzelaAscoIi}{\Large \faGithub } }
-&{\hspace{25mm}\href{https://www.medium.com/@Kristof.herrmann}{\Large \faMedium }}
+\centering{ \href{https://github.com/NemesisFLX}{\Large \faGithub } }
+&{\hspace{25mm}\href{mailto:felix.moenckemeyer@gmail.com}{\Large \faEnvelope }}
 \\
-\centering\small kgherr &
-\centering\small ArzelaAscoIi  & 
-\centering\small @Kristof.herrmann
+\centering\small Felix Mönckemeyer &
+\centering\small NemesisFLX  & 
+\centering\small felix.moenckemeyer@gmail.com
 \end{tabularx}
 
 \end{center}
